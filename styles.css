@@ -1,0 +1,25 @@
+:root {
+  --color-slate-900: rgb(31, 49, 79);
+  --color-slate-500: rgb(104, 119, 141);
+  --color-slate-300: rgb(213, 225, 239);
+  --color-white: rgb(255, 255, 255);
+
+  --spacing-500: 2.5rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+}
+
+.text-heading {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 120%;
+}
+
+.text-body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+}
