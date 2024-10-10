@@ -1,4 +1,7 @@
 :root {
+
+  /* design system custom properties */
+
   --color-slate-900: rgb(31, 49, 79);
   --color-slate-500: rgb(104, 119, 141);
   --color-slate-300: rgb(213, 225, 239);
@@ -7,19 +10,97 @@
   --spacing-500: 2.5rem;
   --spacing-300: 1.5rem;
   --spacing-200: 1rem;
+
+  --card-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+
+  /* additional custom properties */
+
+  --border-radius-400: 1.25rem;
+  --card-width: 20rem;
 }
 
-.text-heading {
+/* reset */
+
+* {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: inherit;
+  box-sizing: border-box;
+}
+
+/* element styles */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: var(--color-slate-300);
   font-family: 'Outfit', sans-serif;
+  color: var(--color-slate-900)
+}
+
+footer {
+  padding-block: 1rem;
+}
+
+/* design system text styles */
+
+.text-heading {
   font-weight: 700;
   font-size: 1.375rem;
   line-height: 120%;
 }
 
 .text-body {
-  font-family: 'Outfit', sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 140%;
   letter-spacing: 0.2px;
+}
+
+/* general classes */
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1fr min-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  background: var(--color-white);
+  box-shadow: var(--card-shadow);
+  padding-inline: var(--spacing-200) var(--spacing-200);
+  padding-block: var(--spacing-200) var(--spacing-500);
+  border-radius: var(--border-radius-400);
+  width: min(var(--card-width), calc(100vw - 2rem));
+  margin-inline: auto;
+}
+
+.card img {
+  border-radius: calc(var(--border-radius-400)/2);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  padding-inline: var(--spacing-200);
+}
+
+/* utility classes */
+
+.text-center {
+  text-align: center;
+}
+
+.text-faded {
+  color: var(--color-slate-500)
 }
